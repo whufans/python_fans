@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2018/12/20 19:34
+# @Author  : fans
+# @File    : test.py
+# @Software: PyCharm Community Edition
+import hashlib
+import os
+# txt文件以文件的MD5值来命名
+# def fileMd5Rename(path):
+#     count = 1
+#     for filename in os.listdir(path):
+#         if filename.endswith('.txt'):
+#             oldname = os.path.join(path,filename)
+#             newname = getfileMd5(oldname)
+#             os.rename(oldname,newname+'.md5')
+#             count += 1
+
+str='123456'
+new_str=str.encode(encoding='utf-8')
+dx=hashlib.md5()
+dx.update(new_str)
+dx_Digest=dx.hexdigest()
+print(dx_Digest)
+
+print(os.listdir(r"E:\test"))
+
+# md5_value = hashlib.md5()
+#     #得到MD5消息摘要
+# md5_value.update(str.encode('utf-8'))
+#     #以16进制返回消息
+# md5_value_Digest = md5_value.hexdigest()
+# print(md5_value_Digest)
+filename1='E:\\test\\test1\\3.txt'
+filename=(os.path.basename(filename1).split('.')[0])
+# dx=hashlib.md5()
+# with open(r'E:\\test\\test1\\1.txt','rb') as f:
+# 	b=f.read()
+# 	dx.update(b)
+# newname=dx.hexdigest()
+# os.rename(r'E:\\test\\test1\\1.txt',newname+'.md5')
+print(filename.replace())
